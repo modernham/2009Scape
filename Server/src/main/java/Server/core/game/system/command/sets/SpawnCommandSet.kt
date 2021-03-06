@@ -9,6 +9,7 @@ import core.game.system.SystemLogger
 import core.game.system.command.CommandPlugin
 import core.plugin.Initializable
 import core.game.system.command.Command
+import core.game.world.repository.Repository
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 
@@ -33,6 +34,20 @@ class SpawnCommandSet : CommandSet(Command.Privilege.ADMIN){
             val clpbrd = Toolkit.getDefaultToolkit().systemClipboard
             clpbrd.setContents(StringSelection(npcString), null)
             println(npcString)
+        }
+
+        /**
+         * Spawns an AI clone of a player
+         */
+        define("clone"){player,args ->
+            if (args.size < 2) {
+                reject(player,"syntax error: id (optional) direction")
+                return@define
+            }
+            val name = args.slice(2 until args.size).joinToString("_")
+            val otherPlayer = Repository.getPlayerByName(name)
+            plugin.ai.AIPBuilder.copy(otherPlayer)
+            player.sendMessage(name)
         }
 
         /**
