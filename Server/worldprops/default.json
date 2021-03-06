@@ -2,8 +2,8 @@
   "name": "DirewolfScape",
 
   "GameSettings": {
-    "debug": true,
-    "dev": true,
+    "debug": false,
+    "dev": false,
     "startGui": false,
     "worldID":"1",
     "countryID": "0",
@@ -46,13 +46,13 @@
   },
 
   "PluginToggles": {
-    "Trivia": false,
-    "RPS": false,
-    "Boredom": false,
+    "Trivia": true,
+    "RPS": true,
+    "Boredom": true,
     "ShootingStars": true,
     "MysteryBox": true,
-    "PKZone": false,
+    "PKZone": true,
     "ObjectParser": true,
-    "BlackJack": false
+    "BlackJack": true
   }
 }

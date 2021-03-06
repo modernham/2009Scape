@@ -44,9 +44,14 @@ public final class EnchantedGemDialogue extends DialoguePlugin {
 
 	@Override
 	public boolean open(Object... args) {
-		player.faceLocation(player.getLocation().transform(1, 0, 0));
-		player.setDirection(Direction.EAST);
-		interpreter.sendDialogues(player.getSlayer().getMaster().getNpc(), FacialExpression.HALF_GUILTY, "Hello there " + player.getUsername() + ", what can I help you with?");
+		//Try to send player info
+		if (!player.getSlayer().hasTask()) {
+			interpreter.sendDialogues(player.getSlayer().getMaster().getNpc(), FacialExpression.HALF_GUILTY, "You need something new to hunt. Come and see me", "When you can and I'll give you a new task.");
+		}
+		else{
+			interpreter.sendDialogues(player.getSlayer().getMaster().getNpc(), FacialExpression.HALF_GUILTY, "You're currently assigned to kill "  + (player.getSlayer().getTask() == Tasks.JAD ? " TzTok-Jad!" : NPCDefinition.forId((player.getSlayer().getTask().getNpcs()[0])).getName().toLowerCase() + "'s;"), "only " + player.getSlayer().getAmount() + " more to go.");
+		}
+
 		stage = 0;
 		return true;
 	}

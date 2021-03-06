@@ -770,7 +770,6 @@ public final class Client extends GameShell {
                 if (4 != var0.length) {
                     Class3_Sub13_Sub23_Sub1.method283("argument count");
                 }
-
                 int var1 = -1;
                 ObjectDefinition.worldId = Integer.parseInt(var0[0]);
                 Class44.anInt718 = 2;
