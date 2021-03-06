@@ -12,7 +12,7 @@ public final class ServerConstants {
 	/**
 	 * The port to be used for communications.
 	 */
-	public static final String SERVER_NAME = "2009Scape";
+	public static final String SERVER_NAME = "DirewolfScape";
 
 	/**
 	 * The port to be used for communications.
@@ -32,7 +32,7 @@ public final class ServerConstants {
 	/**
 	 * The address of the Management server.
 	 */
-	public static final String HOST_ADDRESS = "127.0.0.1";
+	public static final String HOST_ADDRESS = "0.0.0.0";
 
 	/**
 	 * The store path.
@@ -53,7 +53,7 @@ public final class ServerConstants {
 	 * The administrators.
 	 */
 	public static final String[] ADMINISTRATORS = {
-			"redsparr0w",
+			"noobslayer",
 	};
 	
 	public static final String[] DATABASE_NAMES = {

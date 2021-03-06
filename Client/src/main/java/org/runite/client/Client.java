@@ -405,15 +405,18 @@ public final class Client extends GameShell {
             System.out.println("port = " + Class53.anInt867);
             System.out.println("Here: Config.MSIP = " + GameConfig.IP_MANAGEMENT);
             if (Class44.anInt718 == 0) {
+                System.out.println("Mode 0");
                 ClientErrorException.worldListHost = Objects.requireNonNull(this.getCodeBase()).getHost();
                 Class53.anInt867 = GameConfig.SERVER_PORT + ObjectDefinition.worldId; //443 is secure port
                 anInt3773 = '\uaa4a';
             } else if (Class44.anInt718 == 1) {
+                System.out.println("Mode 1");
                 ClientErrorException.worldListHost = Objects.requireNonNull(this.getCodeBase()).getHost();
                 //System.out.println("port = " + Class53.anInt867);
                 Class53.anInt867 = ObjectDefinition.worldId + 50000;
                 anInt3773 = 40000 + ObjectDefinition.worldId;
             } else if (Class44.anInt718 == 2) {
+                System.out.println("Mode 2");
                 ClientErrorException.worldListHost = "127.0.0.1";
                 System.out.println("Setting worldListHost to 127.0.0.1, port = " + Class53.anInt867);
                 Class53.anInt867 = ObjectDefinition.worldId + '\uc350';

@@ -26,8 +26,8 @@ object GameLaunch {
             GameConfig.implementHoliday()
             GameConfig.extendRenderDistance()
         } catch (e: Exception){
-            GameConfig.IP_ADDRESS = "play.2009scape.org"
-            GameConfig.IP_MANAGEMENT = "play.2009scape.org"
+            GameConfig.IP_ADDRESS = "rs.direwolves.xyz"
+            GameConfig.IP_MANAGEMENT = "rs.direwolves.xyz"
             GameConfig.RCM_STYLE_PRESET = "classic"
             GameConfig.RCM_TITLE = "<col=5d5447>Choose Option</col>"
             GameConfig.HOLIDAYS_ENABLED = true

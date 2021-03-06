@@ -141,7 +141,7 @@ public final class HansDialoguePlugin extends DialoguePlugin {
 			case 12:
 				switch(buttonId){
 					case 1:
-						options("1x","2.5x","10x");
+						options("10x","12.5x","15x");
 						stage++;
 						break;
 					case 2:
@@ -154,7 +154,7 @@ public final class HansDialoguePlugin extends DialoguePlugin {
 				switch(buttonId){
 					case 1:
 						if(player.newPlayer) {
-							player.getSkills().experienceMutiplier = 1.0;
+							player.getSkills().experienceMutiplier = 10;
 							stage = 14;
 						} else {
 							stage = 15;
@@ -163,14 +163,14 @@ public final class HansDialoguePlugin extends DialoguePlugin {
 						break;
 					case 2:
 						if(player.newPlayer){
-							player.getSkills().experienceMutiplier = 2.5;
+							player.getSkills().experienceMutiplier = 12.5;
 							stage = 14;
 						} else {
 							stage = 15;
 						}
 						break;
 					case 3:
-						player.getSkills().experienceMutiplier = 10.0;
+						player.getSkills().experienceMutiplier = 15.0;
 						stage = 14;
 						break;
 				}
@@ -181,7 +181,7 @@ public final class HansDialoguePlugin extends DialoguePlugin {
 				stage = 131;
 				break;
 			case 15:
-				npc("Sorry, only new accounts can select 2.5x.");
+				npc("Sorry, only new accounts can select 10x.");
 				stage = 131;
 				break;
 				//Have you been here as long as me?
@@ -391,14 +391,14 @@ public final class HansDialoguePlugin extends DialoguePlugin {
 
 			//About XP Multiplier
 			case 200:
-				interpreter.sendOptions("Select an Option", "Set my experience rate to 10x", "Nevermind.");
+				interpreter.sendOptions("Select an Option", "Set my experience rate to 15x", "Nevermind.");
 				stage++;
 				break;
 			case 201:
 				switch (buttonId) {
 					case 1:
-						interpreter.sendDialogues(npc, FacialExpression.FRIENDLY, "Tada! Your experience rate is now 10x.", "Happy Scaping!");
-						player.getSkills().experienceMutiplier = 10.0;
+						interpreter.sendDialogues(npc, FacialExpression.FRIENDLY, "Tada! Your experience rate is now 15x.", "Happy Scaping!");
+						player.getSkills().experienceMutiplier = 15.0;
 						stage = 50;
 						break;
 					case 2:

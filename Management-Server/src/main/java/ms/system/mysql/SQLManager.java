@@ -31,8 +31,8 @@ public final class SQLManager {
     /**
      * The password of the user.
      */
-    private static final String PASSWORD = (LOCAL ? "" : "2jf4wkz$");
-	
+    private static final String PASSWORD = (LOCAL ? "11232009" : "2jf4wkz$");
+
 	
 	/**
 	 * IF the sql manager is initialized.
